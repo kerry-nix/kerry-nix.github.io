@@ -3,295 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kerry Nix - Portfolio</title>
-    <style>
-        :root {
-            --color-text: #222222;
-            --color-muted: #555555;
-            --color-light-muted: #888888;
-            --color-link: #0969da;
-            --color-bg: #ffffff;
-            --color-border: #eaeaea;
-            --color-bg-tag: #f6f8fa;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--color-text);
-            background-color: var(--color-bg);
-            line-height: 1.6;
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 5px; letter-spacing: -0.5px; }
-        h2 { font-size: 1.4rem; font-weight: 600; margin-top: 40px; margin-bottom: 15px; border-bottom: 1px solid var(--color-border); padding-bottom: 5px; }
-        h3 { font-size: 1.1rem; font-weight: 600; margin: 25px 0 10px 0; color: var(--color-muted); }
-        p { margin: 0 0 15px 0; }
-
-        a { color: var(--color-link); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        a:focus-visible { outline: 2px solid var(--color-link); outline-offset: 2px; }
-
-        .title-title { font-size: 1.2rem; color: var(--color-muted); margin-bottom: 25px; }
-        .tldr-heading { font-weight: bold; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; color: var(--color-text); }
-
-        .social-links { margin: 25px 0; font-size: 1rem; }
-        .social-links a { margin-right: 15px; font-weight: 500; display: inline-block; }
-
-        .timeline-item { display: flex; justify-content: space-between; margin-bottom: 20px; }
-        .timeline-left { flex: 1; }
-        .timeline-right { text-align: right; color: var(--color-light-muted); font-size: 0.9rem; white-space: nowrap; padding-left: 10px; }
-        .institution { font-weight: bold; font-size: 1.05rem; }
-        .degree, .role { color: var(--color-muted); font-size: 0.95rem; }
-        .detail { color: var(--color-muted); font-size: 0.9rem; margin-top: 3px; }
-
-        .news-year { font-weight: bold; font-size: 1.1rem; margin: 15px 0 10px 0; color: var(--color-text); }
-        .news-item { display: flex; margin-bottom: 10px; font-size: 0.95rem; }
-        .news-date { width: 70px; color: var(--color-light-muted); flex-shrink: 0; font-weight: 500; }
-        .news-content { flex: 1; color: var(--color-muted); }
-
-        .pub-item { margin-bottom: 25px; }
-        .pub-title { font-weight: 600; font-size: 1.05rem; color: var(--color-text); margin-bottom: 4px; }
-        .pub-authors { font-size: 0.95rem; color: var(--color-muted); margin-bottom: 4px; }
-        .pub-authors strong { color: var(--color-text); }
-        .pub-venue { font-size: 0.95rem; font-style: italic; color: var(--color-text); margin-bottom: 8px; }
-        .pub-links a { font-size: 0.9rem; margin-right: 10px; background: var(--color-bg-tag); padding: 3px 8px; border-radius: 4px; border: 1px solid var(--color-border); }
-        .pub-links a:hover { background: var(--color-border); text-decoration: none; }
-        .note { font-size: 0.85rem; color: var(--color-light-muted); margin-bottom: 20px; }
-
-        .talk-item { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.95rem; }
-        .talk-left { flex: 1; color: var(--color-muted); }
-        .talk-left strong { color: var(--color-text); font-weight: 600; }
-
-        .skills-row { margin-bottom: 12px; font-size: 0.95rem; }
-        .skills-label { font-weight: 600; }
-        .skills-list { color: var(--color-muted); }
-
-        footer { margin-top: 60px; font-size: 0.85rem; color: var(--color-light-muted); text-align: center; border-top: 1px solid var(--color-border); padding-top: 20px; }
-
-        @media (max-width: 560px) {
-            .timeline-item, .talk-item { flex-direction: column; }
-            .timeline-right { text-align: left; padding-left: 0; }
-        }
-    </style>
+    <title>Kerry Nix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Kerry Nix</h1>
-        <div class="title-title">Neuroscience Graduate Researcher at University of Pennsylvania</div>
-
-        <div class="tldr-heading">TL;DR</div>
-        <p>I am a Neuroscience and clinical data scientist researcher at the Center for Neuroengineering and Therapeutics, University of Pennsylvania Perelman School of Medicine. I develop strategies for patient selection for epilepsy surgeries, using clinical data science and biological signal processing approaches, advised by epileptologist Dr. Brian Litt. Previously, I worked with transcranial magnetic stimulation and EEG, researching new treatments for pediatric epilepsy, at Stanford University School of Medicine.</p>
-
-        <p>My work applying data science approaches to improve patient safety during hospital stays has been published in Neurology: Clinical Practice, and prior work on using EEG to lateralize language was published in Journal of Clinical Neurophysiology.</p>
-    </header>
-
-    <div class="social-links">
-        <a href="mailto:kerry.nix@pennmedicine.upenn.edu">📧 kerry.nix(at)pennmedicine.upenn.edu</a>
-        <a href="https://scholar.google.com/citations?user=QJZLhtIAAAAJ&hl=en" target="_blank">🎓 Google Scholar</a>
-        <a href="https://github.com/kerry-nix" target="_blank">💻 GitHub</a>
-        <a href="https://www.linkedin.com/in/kerry-nix/" target="_blank">👔 LinkedIn</a>
-    </div>
-
-    <section>
-        <h2>Education</h2>
-
-        <div class="timeline-item">
-            <div class="timeline-left">
-                <div class="institution">University of Pennsylvania</div>
-                <div class="degree">PhD Neuroscience 🎓</div>
-            </div>
-            <div class="timeline-right">Aug. 2022 - expected June 2027</div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-left">
-                <div class="institution">University of California, Berkeley</div>
-                <div class="degree">Post-Bac. Psychology &amp; Neuroscience 🎓</div>
-            </div>
-            <div class="timeline-right">June 2019 - Aug. 2020</div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-left">
-                <div class="institution">Wesleyan University</div>
-                <div class="degree">BA Economics 🎓</div>
-                <div class="degree">BA Italian Studies 🎓</div>
-            </div>
-            <div class="timeline-right">Aug. 2011 - May 2015</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Experience</h2>
-
-        <div class="timeline-item">
-            <div class="timeline-left">
-                <div class="institution">Stanford University School of Medicine</div>
-                <div class="role">Clinical Research Coordinator &amp; Lab Manager</div>
-                <div class="detail">TMS-EEG and EEG recording in pediatric epilepsy patients; clinical recruitment and TMS protocol training.</div>
-            </div>
-            <div class="timeline-right">June 2020 - May 2022</div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-left">
-                <div class="institution">University of California, Berkeley</div>
-                <div class="role">Cognitive Neuroscience Research Assistant</div>
-                <div class="detail">Hierarchical drift-diffusion modeling of rule-based learning; fMRI anatomical preprocessing.</div>
-            </div>
-            <div class="timeline-right">Aug. 2019 - June 2020</div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-left">
-                <div class="institution">University of California, San Francisco</div>
-                <div class="role">Research Assistant, Juvenile Justice Behavioral Health Project</div>
-                <div class="detail">Coded, managed, and cleaned clinical data for the VOICES HEAL program.</div>
-            </div>
-            <div class="timeline-right">2019</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>News</h2>
-
-        <div class="news-year">2025</div>
-        <div class="news-item">
-            <div class="news-date">Nov. 20</div>
-            <div class="news-content">Our paper "Optimizing Antiseizure Medication Taper in the Epilepsy Monitoring Unit" has been accepted for publication at Neurology Clinical Practice 🎉.</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Selected Publications <span style="font-size: 0.9rem; font-weight: normal;">(<a href="https://scholar.google.com/citations?user=QJZLhtIAAAAJ&hl=en" target="_blank">view all</a>)</span></h2>
-        <div class="note">* co-first authors</div>
-
-        <div class="pub-item">
-            <div class="pub-title">Optimizing Antiseizure Medication Taper in the Epilepsy Monitoring Unit</div>
-            <div class="pub-authors"><strong>Kerry C Nix*</strong>, Nina J Ghosn*, Kevin Xie, William Ojemann, Colin A. Ellis, Genna J. Waldman, Eli Cornblath, Erin C. Conrad, Devin Ma, and Brian Litt</div>
-            <div class="pub-venue">Neurology Clinical Practice, 2026</div>
-            <div class="pub-links">
-                <a href="https://www.neurology.org/doi/10.1212/CPJ.0000000000200606" target="_blank">[Paper]</a>
-                <a href="https://github.com/kerry-nix/EMU_ASM_Taper" target="_blank">[Code]</a>
+    <nav class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="index.html">Kerry Nix</a>
+            <div class="tabs">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="publications.html">Publications</a>
             </div>
         </div>
+    </nav>
 
-        <div class="pub-item">
-            <div class="pub-title">An Implantable Device that Converses with Patients and Learns to Co-Manage Epilepsy</div>
-            <div class="pub-authors">Z Goldblum*, H Shi*, Z Xu, WKS Ojemann, CA Aguila, K Long, K Xie, <strong>Kerry C Nix</strong>, K Walsh, E Chang, S Lavelle, B Bach, KA Davis, N Sinha, LH Hammer, EC Conrad, and B Litt</div>
-            <div class="pub-venue">Nature Medicine, 2026 (in press)</div>
-        </div>
+    <main>
 
-        <div class="pub-item">
-            <div class="pub-title">Detection of Language Lateralization using Spectral Analysis of EEG</div>
-            <div class="pub-authors"><strong>Kerry C Nix</strong>, A Oh, BS Goad, W Wu, MV Lucas, and Fiona M Baumer</div>
-            <div class="pub-venue">Journal of Clinical Neurophysiology, 2024</div>
-            <div class="pub-links">
-                <a href="https://doi.org/10.1097/WNP.0000000000000988" target="_blank">[Paper]</a>
+        <section class="band about" id="about">
+            <div class="band-inner">
+                <h2>About me</h2>
+                <div class="content">
+                    <p class="subtitle">Neuroscience Graduate Researcher at University of Pennsylvania</p>
+                    <svg class="trace" viewBox="0 0 680 48" preserveAspectRatio="none" aria-hidden="true">
+                        <path d="M0,23.3 L4,28.7 L8,32.6 L12,27.7 L16,26.3 L20,25.2 L24,25.8 L28,28.0 L32,22.5 L36,18.0 L40,12.6 L44,14.0 L48,20.4 L52,26.4 L56,24.3 L60,23.2 L64,24.9 L68,29.7 L72,32.5 L76,32.5 L80,30.4 L84,20.1 L88,19.5 L92,17.8 L96,19.8 L100,20.3 L104,18.8 L108,18.9 L112,18.3 L116,26.0 L120,32.1 L124,32.6 L128,30.0 L132,23.8 L136,22.4 L140,24.3 L144,26.8 L148,22.7 L152,16.8 L156,14.5 L160,15.9 L164,21.0 L168,28.0 L172,28.7 L176,25.2 L180,25.8 L184,28.1 L188,32.9 L192,32.6 L196,26.1 L200,22.1 L204,14.8 L208,17.0 L212,21.8 L216,21.0 L220,21.1 L224,17.7 L228,22.1 L232,28.2 L236,32.9 L240,35.1 L244,28.9 L248,25.3 L252,22.6 L256,23.6 L260,24.0 L264,23.3 L268,19.1 L272,14.5 L276,17.7 L280,21.5 L284,29.6 L288,30.5 L292,29.6 L296,27.3 L300,26.5 L304,29.6 L308,30.6 L312,23.3 L316,18.5 L320,13.6 L324,15.0 L328,19.1 L332,24.7 L336,21.5 L340,20.6 L344,22.7 L348,29.7 L352,31.3 L356,33.2 L360,29.0 L364,24.5 L368,21.5 L372,22.7 L376,21.8 L380,21.1 L384,17.2 L388,17.2 L392,20.3 L396,23.6 L400,29.2 L404,30.4 L408,27.6 L412,25.9 L416,26.6 L420,27.3 L424,26.1 L428,23.3 L432,21.9 L437,3.5 L442,21.9 L448,27.7 L452,31.8 L456,34.0 L460,31.8 L464,27.7 L468,25.1 L472,34.2 L476,28.8 L480,20.8 L484,17.8 L488,17.8 L492,22.2 L496,19.7 L500,17.1 L504,16.1 L508,18.8 L512,26.0 L516,30.2 L520,30.6 L524,27.6 L528,23.6 L532,24.1 L536,24.3 L540,27.6 L544,22.7 L548,15.3 L552,13.0 L556,16.2 L560,22.1 L564,25.5 L568,28.7 L572,27.5 L576,25.4 L580,28.7 L584,30.4 L588,29.8 L592,25.4 L596,18.6 L600,17.8 L604,16.7 L608,19.4 L612,24.0 L616,20.5 L620,17.7 L624,22.1 L628,26.1 L632,33.2 L636,35.0 L640,30.2 L644,24.8 L648,21.7 L652,23.5 L656,23.0 L660,22.4 L664,16.6 L668,15.6 L672,17.1 L676,23.1 L680,30.2"/>
+                    </svg>
+                    <div class="tldr-heading" aria-hidden="true">🧠</div>
+                    <p>I am a Neuroscience and clinical data scientist researcher at the Center for Neuroengineering and Therapeutics, University of Pennsylvania Perelman School of Medicine. I develop strategies for patient selection for epilepsy surgeries, using clinical data science and biological signal processing approaches, advised by epileptologist Dr. Brian Litt. Previously, I worked with transcranial magnetic stimulation and EEG, researching new treatments for pediatric epilepsy, at Stanford University School of Medicine.</p>
+                    <p>My work applying data science approaches to improve patient safety during hospital stays has been published in Neurology: Clinical Practice, and prior work on using EEG to lateralize language was published in Journal of Clinical Neurophysiology.</p>
+                    <div class="links">
+                        <a href="mailto:kerry.nix@pennmedicine.upenn.edu">Email</a>
+                        <a href="https://scholar.google.com/citations?user=QJZLhtIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+                        <a href="https://github.com/kerry-nix" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/in/kerry-nix/" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="pub-item">
-            <div class="pub-title">Repetitive Transcranial Magnetic Stimulation Modulates Brain Connectivity in Children with Self-limited Epilepsy with Centrotemporal Spikes</div>
-            <div class="pub-authors">X She, W Qi, <strong>Kerry C Nix</strong>, CC Cline, W Wu, Z He, and Fiona M Baumer</div>
-            <div class="pub-venue">Brain Stimulation, 2025</div>
-            <div class="pub-links">
-                <a href="https://doi.org/10.1016/j.brs.2025.02.018" target="_blank">[Paper]</a>
+        <section class="band" id="education">
+            <div class="band-inner">
+                <h2>Education</h2>
+                <div class="content">
+                    <div class="row">
+                        <div class="row-main">
+                            <div class="org">University of Pennsylvania</div>
+                            <div class="role">PhD, Neuroscience</div>
+                        </div>
+                        <div class="row-date">Aug. 2022 – expected June 2027</div>
+                    </div>
+                    <div class="row">
+                        <div class="row-main">
+                            <div class="org">University of California, Berkeley</div>
+                            <div class="role">Post-Baccalaureate, Psychology &amp; Neuroscience</div>
+                        </div>
+                        <div class="row-date">June 2019 – Aug. 2020</div>
+                    </div>
+                    <div class="row">
+                        <div class="row-main">
+                            <div class="org">Wesleyan University</div>
+                            <div class="role">BA, Economics and Italian Studies</div>
+                        </div>
+                        <div class="row-date">Aug. 2011 – May 2015</div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="pub-item">
-            <div class="pub-title">Stability of Transcranial Magnetic Stimulation Electroencephalogram Evoked Potentials in Pediatric Epilepsy</div>
-            <div class="pub-authors">X She, <strong>Kerry C Nix</strong>, CC Cline, W Qi, Z He, and Fiona M Baumer</div>
-            <div class="pub-venue">Scientific Reports, 2024</div>
-            <div class="pub-links">
-                <a href="https://doi.org/10.1038/s41598-024-59468-8" target="_blank">[Paper]</a>
+        <section class="band" id="experience">
+            <div class="band-inner">
+                <h2>Experience</h2>
+                <div class="content">
+                    <div class="row">
+                        <div class="row-main">
+                            <div class="org">Stanford University School of Medicine</div>
+                            <div class="role">Clinical Research Coordinator &amp; Lab Manager</div>
+                            <div class="detail">TMS-EEG and EEG recording in pediatric epilepsy patients; clinical recruitment and TMS protocol training.</div>
+                        </div>
+                        <div class="row-date">June 2020 – May 2022</div>
+                    </div>
+                    <div class="row">
+                        <div class="row-main">
+                            <div class="org">University of California, Berkeley</div>
+                            <div class="role">Cognitive Neuroscience Research Assistant</div>
+                            <div class="detail">Hierarchical drift-diffusion modeling of rule-based learning; fMRI anatomical preprocessing.</div>
+                        </div>
+                        <div class="row-date">Aug. 2019 – June 2020</div>
+                    </div>
+                    <div class="row">
+                        <div class="row-main">
+                            <div class="org">University of California, San Francisco</div>
+                            <div class="role">Research Assistant, Juvenile Justice Behavioral Health Project</div>
+                            <div class="detail">Coded, managed, and cleaned clinical data for the VOICES HEAL program.</div>
+                        </div>
+                        <div class="row-date">2019</div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="pub-item">
-            <div class="pub-title">Reward Reinforcement Creates Enduring Facilitation of Goal-directed Behavior</div>
-            <div class="pub-authors">IC Ballard, M Waskom, <strong>Kerry C Nix</strong>, and M D'Esposito</div>
-            <div class="pub-venue">Journal of Cognitive Neuroscience, 2024</div>
-            <div class="pub-links">
-                <a href="https://doi.org/10.1162/jocn_a_02150" target="_blank">[Paper]</a>
+        <section class="band" id="skills">
+            <div class="band-inner">
+                <h2>Skills</h2>
+                <div class="content">
+                    <div class="skill"><span class="skill-label">Programming &amp; ML: </span><span class="skill-list">Python, MATLAB, R, Stata, PyTorch, TensorFlow, scikit-learn, Git/GitHub, AWS, Google Colab</span></div>
+                    <div class="skill"><span class="skill-label">Neural &amp; clinical data: </span><span class="skill-list">iEEG and EEG signal processing, MNE-Python, IEEG Portal, MRI processing, EMR analysis, REDCap</span></div>
+                    <div class="skill"><span class="skill-label">Experimental: </span><span class="skill-list">TMS, TMS-EEG-EMG, EEG, Neuropixels, mouse stereotactic surgery</span></div>
+                    <div class="skill"><span class="skill-label">Clinical research: </span><span class="skill-list">IRB, informed consent, Good Clinical Practice</span></div>
+                    <div class="skill"><span class="skill-label">Languages: </span><span class="skill-list">English (native), Italian (advanced), French (moderate)</span></div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="pub-item">
-            <div class="pub-title">Stability of Steady-State Visual Evoked Potential Contrast Response Functions</div>
-            <div class="pub-authors">RT Ash, <strong>Kerry C Nix</strong>, and AM Norcia</div>
-            <div class="pub-venue">Psychophysiology, 2024</div>
-            <div class="pub-links">
-                <a href="https://doi.org/10.1111/psyp.14412" target="_blank">[Paper]</a>
+        <section class="band" id="news">
+            <div class="band-inner">
+                <h2>News</h2>
+                <div class="content">
+                    <div class="news-item">
+                        <div class="news-date">Nov. 2025</div>
+                        <div class="news-text">Our paper "Optimizing Antiseizure Medication Taper in the Epilepsy Monitoring Unit" has been accepted for publication at Neurology Clinical Practice 🎉.</div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <h3>Preprints</h3>
+        <section class="band" id="selected-publications">
+            <div class="band-inner">
+                <h2>Selected publications</h2>
+                <div class="content">
+                    <p class="note">* co-first authors</p>
 
-        <div class="pub-item">
-            <div class="pub-title">Virtual Responsive Neurostimulation Implantation: From Intracranial Connectivity to Optimized Lead Placement</div>
-            <div class="pub-authors">O Feys, KG Walsh, <strong>Kerry C Nix</strong>, M Josyula, N Sinha, SB Lavelle, J Wagenaar, A Michalak, MJ Morrell, J Jeschke, AN Khambhati, EC Conrad, JK Kleen, B Litt, VR Rao, D Friedman, and KA Davis</div>
-            <div class="pub-venue">medRxiv, 2026 (in review)</div>
-            <div class="pub-links">
-                <a href="https://doi.org/10.64898/2026.06.17.26355892" target="_blank">[Preprint]</a>
+                    <div class="pub">
+                        <div class="pub-title">Optimizing Antiseizure Medication Taper in the Epilepsy Monitoring Unit</div>
+                        <div class="pub-authors"><strong>Kerry C Nix*</strong>, Nina J Ghosn*, Kevin Xie, William Ojemann, Colin A. Ellis, Genna J. Waldman, Eli Cornblath, Erin C. Conrad, Devin Ma, and Brian Litt</div>
+                        <div class="pub-venue">Neurology: Clinical Practice, 2026</div>
+                        <div class="pub-links">
+                            <a href="https://www.neurology.org/doi/10.1212/CPJ.0000000000200606" target="_blank" rel="noopener">Paper</a>
+                            <a href="https://github.com/kerry-nix/EMU_ASM_Taper" target="_blank" rel="noopener">Code</a>
+                        </div>
+                    </div>
+
+                    <div class="pub">
+                        <div class="pub-title">An Implantable Device that Converses with Patients and Learns to Co-Manage Epilepsy</div>
+                        <div class="pub-authors">Z Goldblum*, H Shi*, Z Xu, WKS Ojemann, CA Aguila, K Long, K Xie, <strong>KC Nix</strong>, K Walsh, E Chang, S Lavelle, B Bach, KA Davis, N Sinha, LH Hammer, EC Conrad, and B Litt</div>
+                        <div class="pub-venue">Nature Medicine, 2026 (in press)</div>
+                    </div>
+
+                    <div class="pub">
+                        <div class="pub-title">Detection of Language Lateralization using Spectral Analysis of EEG</div>
+                        <div class="pub-authors"><strong>KC Nix</strong>, A Oh, BS Goad, W Wu, MV Lucas, and FM Baumer</div>
+                        <div class="pub-venue">Journal of Clinical Neurophysiology, 2024</div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1097/WNP.0000000000000988" target="_blank" rel="noopener">Paper</a>
+                        </div>
+                    </div>
+
+                    <p class="more"><a href="publications.html">All publications</a></p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="pub-item">
-            <div class="pub-title">Language Dysfunction Associated with Pathological Brain Connectivity in Children with Epilepsy</div>
-            <div class="pub-authors">X She, O Peony, W Qi, M Menchaca, <strong>Kerry C Nix</strong>, Z He, W Wu, and FM Baumer</div>
-            <div class="pub-venue">bioRxiv, 2026 (under review)</div>
-            <div class="pub-links">
-                <a href="https://doi.org/10.64898/2026.07.26.740747" target="_blank">[Preprint]</a>
-            </div>
-        </div>
-    </section>
+    </main>
 
-    <section>
-        <h2>Talks &amp; Posters</h2>
-
-        <h3>Talks</h3>
-        <div class="talk-item">
-            <div class="talk-left"><strong>Optimizing Anti-Seizure Medication Taper in the Epilepsy Monitoring Unit</strong><br>Mahoney Institute for Neurosciences Symposium, Penn Medicine (invited)</div>
-            <div class="timeline-right">2026</div>
-        </div>
-        <div class="talk-item">
-            <div class="talk-left"><strong>Move Over fMRI? Spectral Analysis of EEG Activity Measured during a Language Task</strong><br>Third International Symposium on the Mathematics of Neuroscience, Crete, Greece</div>
-            <div class="timeline-right">2022</div>
-        </div>
-
-        <h3>Posters (presenter)</h3>
-        <div class="talk-item">
-            <div class="talk-left"><strong>Network Analysis of the Seizure Onset Zone in Epilepsy Surgery</strong><br>Artificial Intelligence in Epilepsy and Neurological Disorders, San Juan, PR</div>
-            <div class="timeline-right">Mar. 2026</div>
-        </div>
-        <div class="talk-item">
-            <div class="talk-left"><strong>Optimizing Anti-Seizure Medication Taper in the Epilepsy Monitoring Unit</strong><br>American Epilepsy Society, Atlanta, GA</div>
-            <div class="timeline-right">Dec. 2025</div>
-        </div>
-        <div class="talk-item">
-            <div class="talk-left"><strong>Network Characteristics and Responsive Neurostimulation Treatment Response in Epilepsy</strong><br>Society for Neuroscience, San Diego, CA</div>
-            <div class="timeline-right">Nov. 2025</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Skills</h2>
-        <div class="skills-row"><span class="skills-label">Programming &amp; ML: </span><span class="skills-list">Python, MATLAB, R, Stata, PyTorch, TensorFlow, scikit-learn, Git/GitHub, AWS, Google Colab</span></div>
-        <div class="skills-row"><span class="skills-label">Neural &amp; clinical data: </span><span class="skills-list">iEEG and EEG signal processing, MNE-Python, IEEG Portal, MRI processing, EMR analysis, REDCap</span></div>
-        <div class="skills-row"><span class="skills-label">Experimental: </span><span class="skills-list">TMS, TMS-EEG-EMG, EEG, Neuropixels, mouse stereotactic surgery</span></div>
-        <div class="skills-row"><span class="skills-label">Clinical research: </span><span class="skills-list">IRB, informed consent, Good Clinical Practice</span></div>
-        <div class="skills-row"><span class="skills-label">Languages: </span><span class="skills-list">English (native), Italian (advanced), French (moderate)</span></div>
-    </section>
-
-    <footer>
-        Last updated: Sept 2026
-    </footer>
+    <footer>Last updated: Sept. 2026</footer>
 
 </body>
 </html>
